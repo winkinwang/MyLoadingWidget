@@ -18,25 +18,17 @@ public:
     MyLoadingWidget(QWidget *parent = 0);
     ~MyLoadingWidget();
 
+    void start();
+
+    void stop();
+
     static void test(QWidget *parent);
-
-
 private:
     virtual void resizeEvent(QResizeEvent *event);
 
-public slots:
-
-
-signals:
-    void loading();
-
 private:
-    Ui::MyLoadingWidget *ui;
-    QMovie *movie;
-    QLabel *label;
-    QLabel * tip_label;
-    QFrame * background;
-    QTimer *timer ;
+    QMovie *mMovie;
+    QLabel *mLabel;
 };
 
 
